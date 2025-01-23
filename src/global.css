@@ -3,4 +3,5 @@
 @theme {
     --font-anton: "Anton", serif;
     --font-inter: "Inter", serif;
+    --spacing-content: 73rem;
 }
