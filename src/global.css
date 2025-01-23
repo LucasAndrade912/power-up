@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+    --font-anton: "Anton", serif;
+    --font-inter: "Inter", serif;
+}
