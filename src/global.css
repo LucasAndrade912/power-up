@@ -6,3 +6,20 @@
     --spacing-content: 73rem;
     --text-main-title: 4rem;
 }
+
+@layer components {
+    .title {
+        display: inline-block;
+    }
+
+    .title h2 {
+        font-size: 2.5rem;
+        font-family: var(--font-anton);
+    }
+
+    .title div.underline {
+        width: 50%;
+        height: .5rem;
+        background-color: var(--color-red-500);
+    }
+}
