@@ -11,7 +11,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1 class="text-4xl font-bold text-emerald-700">Hello World</h1>
+    <body class="font-inter bg-neutral-900 text-white">
+        <header class="w-full px-[136px] mt-8 flex items-center justify-between">
+            <a href="#" class="flex text-red-500 items-center gap-[14px]">
+                <i class="ph-fill ph-barbell text-5xl"></i>
+                <h1 class="font-anton text-[40px]">PowerUp</h1>
+            </a>
+
+            <nav>
+                <ul class="flex items-center justify-between gap-10">
+                    <li>
+                        <a href="#about-us">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a href="#plans">Planos</a>
+                    </li>
+                    <li>
+                        <a href="#testimonials">Depoimentos</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#plans" class="px-8 py-3 rounded-xs flex justify-center items-center bg-red-500 transition-colors hover:bg-red-400 text-xl font-anton">
+                Escolher Plano
+            </a>
+        </header>
     </body>
 </html>
