@@ -13,6 +13,7 @@
             href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
+        <script defer src="./index.js" type="module"></script>
     </head>
     <body class="font-inter bg-neutral-900 text-white overflow-x-hidden">
         <header
@@ -20,7 +21,7 @@
         >
             <a href="#" class="flex text-red-500 items-center gap-3.5">
                 <i class="ph-fill ph-barbell text-5xl"></i>
-                <h1 class="font-anton text-[40px]">PowerUp</h1>
+                <h1 class="font-anton text-[2.5rem]">PowerUp</h1>
             </a>
 
             <nav>
@@ -54,11 +55,11 @@
                 class="flex max-w-content m-auto gap-8 items-center"
             >
                 <div id="hero-texts" class="flex flex-col">
-                    <h1 class="font-anton text-main-title w-[32.875rem]">
+                    <h1 class="font-anton text-main-title w-[526px]">
                         Construa sua melhor versão hoje
                     </h1>
 
-                    <p class="text-lg w-[41.75rem] mt-10 font-medium">
+                    <p class="text-lg w-[668px] mt-10 font-medium">
                         Sua transformação começa agora! Nossa academia oferece
                         estrutura de ponta, profissionais qualificados e um
                         ambiente motivador para você alcançar seus objetivos.
@@ -90,7 +91,7 @@
                     </div>
 
                     <p
-                        class="w-[30.75rem] leading-[180%] text-lg mt-[4rem] mb-8"
+                        class="w-[492px] leading-[180%] text-lg mt-[64px] mb-8"
                     >
                         Na PowerUp, acreditamos que cada pessoa tem o potencial
                         de alcançar sua melhor versão. Nossa missão é
@@ -99,7 +100,7 @@
                         reais.
                     </p>
 
-                    <p class="w-[30.75rem] leading-[180%] text-lg">
+                    <p class="w-[492px] leading-[180%] text-lg">
                         Contamos com uma estrutura moderna, equipamentos de
                         última geração e uma equipe de profissionais altamente
                         qualificados, prontos para acompanhar você em cada etapa
@@ -272,6 +273,106 @@
                             <button>Escolher Plano</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="max-w-content m-auto py-20">
+            <div class="title">
+                <h2>Depoimentos</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div
+                id="testimonials-content"
+                class="flex mt-[18px] justify-between"
+            >
+                <div
+                    id="testimonials-texts"
+                    class="w-[548px] self-end mb-3.5"
+                >
+                    <h3 class="font-anton text-[28px]">
+                        Descubra o que dizem aqueles que já transformaram suas
+                        vidas aqui!
+                    </h3>
+
+                    <p class="mt-10 leading-[1.5] w-[480px]">
+                        Nosso compromisso vai além de oferecer treinos e
+                        equipamentos: estamos aqui para transformar vidas.
+                        Nossos alunos são a prova viva do impacto que uma
+                        academia comprometida com resultados reais pode ter.
+                    </p>
+                </div>
+
+                <div
+                    id="testimonial-card"
+                    class="relative w-[520px] h-[280px] rounded-xs bg-neutral-950 p-7 flex flex-col justify-between"
+                >
+                    <div
+                        id="testimonial-card-header"
+                        class="flex w-full justify-between items-center"
+                    >
+                        <div id="author-data" class="flex">
+                            <img
+                                src="./assets/img-03.jpeg"
+                                alt="Avatar"
+                                class="rounded-full w-16 h-16 mr-6"
+                            />
+
+                            <div
+                                id="author"
+                                class="flex flex-col justify-between"
+                            >
+                                <span
+                                    id="author-name"
+                                    class="font-semibold text-2xl"
+                                    >Joana Pereira</span
+                                >
+                                <span id="author-profession"
+                                    >Designer Gráfico</span
+                                >
+                            </div>
+                        </div>
+
+                        <div id="votes" class="flex gap-2">
+                            <i
+                                class="ph-fill ph-star text-xl text-yellow-400"
+                            ></i>
+                            <i
+                                class="ph-fill ph-star text-xl text-yellow-400"
+                            ></i>
+                            <i
+                                class="ph-fill ph-star text-xl text-yellow-400"
+                            ></i>
+                            <i
+                                class="ph-fill ph-star text-xl text-yellow-400"
+                            ></i>
+                            <i
+                                class="ph-fill ph-star text-xl text-yellow-400"
+                            ></i>
+                        </div>
+                    </div>
+
+                    <p id="testimonial-text" class="leading-[1.5]">
+                        Nunca me senti tão motivada a treinar! A equipe da
+                        academia é incrível e sempre me apoia nos meus
+                        objetivos. Em poucos meses, já sinto a diferença na
+                        minha energia e autoestima.
+                    </p>
+
+                    <button
+                        id="prev-btn"
+                        class="cursor-pointer absolute top-1/2 -left-[1.5rem] transform -translate-y-1/2 text-white"
+                    >
+                        <i class="ph-fill ph-arrow-circle-left text-4xl"></i>
+                    </button>
+
+                    <button
+                        id="next-btn"
+                        class="cursor-pointer absolute top-1/2 -right-[1.5rem] transform -translate-y-1/2 text-white"
+                    >
+                        <i class="ph-fill ph-arrow-circle-right text-4xl"></i>
+                    </button>
                 </div>
             </div>
         </section>
