@@ -17,36 +17,77 @@
     </head>
     <body class="font-inter bg-neutral-900 text-white overflow-x-hidden">
         <header
-            class="w-full mt-8 mb-20 flex items-center justify-between max-w-content m-auto"
+            class="w-full mt-8 mb-20 flex items-center justify-between max-w-content m-auto relative max-lg:mt-8 max-lg:max-w-full max-lg:px-7 max-lg:mb-12"
         >
             <a href="#" class="flex text-red-500 items-center gap-3.5">
                 <i class="ph-fill ph-barbell text-5xl"></i>
                 <h1 class="font-anton text-[2.5rem]">PowerUp</h1>
             </a>
 
-            <nav>
+            <nav class="justify-between w-full flex max-lg:hidden">
+                <div id="none"></div>
+
                 <ul class="flex items-center justify-between gap-10">
                     <li>
-                        <a href="#about-us">Sobre Nós</a>
+                        <a href="#about-us" class="text-lg">Sobre Nós</a>
                     </li>
                     <li>
-                        <a href="#plans">Planos</a>
+                        <a href="#plans" class="text-lg">Planos</a>
                     </li>
                     <li>
-                        <a href="#testimonials">Depoimentos</a>
+                        <a href="#testimonials" class="text-lg">Depoimentos</a>
                     </li>
                     <li>
-                        <a href="#contact">Contato</a>
+                        <a href="#contact" class="text-lg">Contato</a>
                     </li>
                 </ul>
+
+                <a
+                    href="#plans"
+                    class="px-8 py-3 rounded-xs flex justify-center items-center bg-red-500 transition-colors hover:bg-red-400 text-xl font-anton"
+                >
+                    Escolher Plano
+                </a>
             </nav>
 
-            <a
-                href="#plans"
-                class="px-8 py-3 rounded-xs flex justify-center items-center bg-red-500 transition-colors hover:bg-red-400 text-xl font-anton"
+            <button id="menu-toggle" class="lg:hidden text-2xl cursor-pointer">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <div
+                id="mobile-menu"
+                class="hidden lg:hidden fixed top-0 left-0 h-full w-full bg-neutral-800 z-40 shadow-lg transition-transform duration-300 ease-in-out"
             >
-                Escolher Plano
-            </a>
+                <div class="flex justify-end p-4">
+                    <button id="close-menu">
+                        <i class="ph ph-x text-3xl font-bold"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col gap-6 p-4 max-w-[70%] m-auto">
+                    <li class="w-full text-center">
+                        <a href="#about-us" class="text-lg mobile-link">Sobre Nós</a>
+                    </li>
+                    <li class="w-full text-center">
+                        <a href="#plans" class="text-lg mobile-link">Planos</a>
+                    </li>
+                    <li class="w-full text-center">
+                        <a href="#testimonials" class="text-lg mobile-link"
+                            >Depoimentos</a
+                        >
+                    </li>
+                    <li class="w-full text-center">
+                        <a href="#contact" class="text-lg mobile-link">Contato</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#plans"
+                            class="mobile-link px-8 py-3 rounded-xs flex justify-center items-center bg-red-500 transition-colors hover:bg-red-400 text-xl font-anton"
+                        >
+                            Escolher Plano
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </header>
 
         <section id="hero" class="relative">
@@ -90,9 +131,7 @@
                         <div class="underline"></div>
                     </div>
 
-                    <p
-                        class="w-[492px] leading-[180%] text-lg mt-[64px] mb-8"
-                    >
+                    <p class="w-[492px] leading-[180%] text-lg mt-[64px] mb-8">
                         Na PowerUp, acreditamos que cada pessoa tem o potencial
                         de alcançar sua melhor versão. Nossa missão é
                         proporcionar um ambiente acolhedor e motivador, onde
@@ -287,10 +326,7 @@
                 id="testimonials-content"
                 class="flex mt-[18px] justify-between"
             >
-                <div
-                    id="testimonials-texts"
-                    class="w-[548px] self-end mb-3.5"
-                >
+                <div id="testimonials-texts" class="w-[548px] self-end mb-3.5">
                     <h3 class="font-anton text-[28px]">
                         Descubra o que dizem aqueles que já transformaram suas
                         vidas aqui!
@@ -385,27 +421,49 @@
                 </div>
 
                 <div id="form-content" class="mt-20 flex gap-20">
-                    <img src="./assets/img-04.jpg" alt="Academia" class="rounded-xs w-[564px] h-[420px]">
+                    <img
+                        src="./assets/img-04.jpg"
+                        alt="Academia"
+                        class="rounded-xs w-[564px] h-[420px]"
+                    />
 
                     <form class="w-full flex flex-col justify-between">
                         <div id="fields" class="flex flex-col gap-8">
-                            <input type="text" placeholder="Nome:" class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white">
-                        <input type="text" placeholder="Sobrenome:" class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white">
-                        <input type="email" placeholder="Email:" class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white">
-                        <input type="tel" placeholder="Telefone:" class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white">
+                            <input
+                                type="text"
+                                placeholder="Nome:"
+                                class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Sobrenome:"
+                                class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white"
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email:"
+                                class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white"
+                            />
+                            <input
+                                type="tel"
+                                placeholder="Telefone:"
+                                class="w-full h-12 px-3 border border-white rounded-xs placeholder:text-lg placeholder:text-white"
+                            />
                         </div>
 
                         <button
                             class="self-start cursor-pointer px-8 py-3 rounded-xs flex justify-center items-center bg-red-500 transition-colors hover:bg-red-400 text-xl font-anton"
                         >
                             Nos contate
-                    </button>
+                        </button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <footer class="max-w-content my-16 mx-auto flex items-center justify-between">
+        <footer
+            class="max-w-content my-16 mx-auto flex items-center justify-between"
+        >
             <a href="#" class="flex text-red-500 items-center gap-3.5">
                 <i class="ph-fill ph-barbell text-5xl"></i>
                 <h1 class="font-anton text-[2.5rem]">PowerUp</h1>
