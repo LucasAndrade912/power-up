@@ -32,6 +32,7 @@ const menuToggle = document.getElementById('menu-toggle')
 const mobileMenu = document.getElementById('mobile-menu')
 const closeMenu = document.getElementById('close-menu')
 const mobileLinks = document.querySelectorAll('.mobile-link')
+const plansCards = document.getElementById('plans-cards')
 
 // function updateTestimonial(index, direction) {
 //     gsap.to(card, {
@@ -80,3 +81,6 @@ mobileLinks.forEach(link => {
         } })
     })
 })
+
+const vertical_shift = plansCards.scrollHeight / 2
+plansCards.scrollTo(vertical_shift, 0)

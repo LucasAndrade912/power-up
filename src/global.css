@@ -24,7 +24,7 @@
     }
 
     .plan-card {
-        width: 280px;
+        min-width: 280px;
         height: 342px;
         background-color: var(--color-neutral-800);
         border-radius: var(--radius-xs);
